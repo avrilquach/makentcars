@@ -1,69 +1,22 @@
 $(document).ready(function () {
-	$('.home-banner-slider').owlCarousel({
-		items: 1,
-		lazyLoad: true,
-	});
-	$('.lazy').lazy();
-	$('.explore-slider').owlCarousel({
-		items: 5,
-		lazyLoad: true,
-		margin: 20,
+	$(".js-show-how-it-works").click(function(e){
+		$(".how-it-works").show();
+	})
+	$(".js-close-how-it-works").click(function(e){
+		$(".js-how-it-works").hide();
+	})
+	$(".host_banner_slides").responsiveSlides();
+	$("#bottom_slider").responsiveSlides({
+		auto: false,
+		pager: false,
 		nav: true,
-		navText: ['<i class="icon icon-chevron-right custom-rotate" aria-hidden="true"></i>', '<i class="icon icon-chevron-right" aria-hidden="true"></i>'],
-		dots: true,
-		responsiveClass: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			768: {
-				items: 3
-			},
-			1200: {
-				items: 5
-			}
+		speed: 500,
+		namespace: "callbacks",
+		before: function () {
+			$('.events').append("<li>before event fired.</li>");
+		},
+		after: function () {
+			$('.events').append("<li>after event fired.</li>");
 		}
 	});
-	$('.experience-slider').owlCarousel({
-		items: 5,
-		lazyLoad: true,
-		margin: 20,
-		nav: true,
-		navText: ['<i class="icon icon-chevron-right custom-rotate" aria-hidden="true"></i>', '<i class="icon icon-chevron-right" aria-hidden="true"></i>'],
-		dots: true,
-		responsiveClass: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			768: {
-				items: 3
-			},
-			1200: {
-				items: 5
-			}
-		}
-	});
-	$('#community-slider').owlCarousel({
-		items: 5,
-		lazyLoad: true,
-		margin: 20,
-		nav: true,
-		navText: ['<i class="icon icon-chevron-right custom-rotate" aria-hidden="true"></i>', '<i class="icon icon-chevron-right" aria-hidden="true"></i>'],
-		dots: true,
-		responsiveClass: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			768: {
-				items: 3
-			},
-			1200: {
-				items: 5
-			}
-		}
-	});
-	$('input[name="daterange"]').daterangepicker();
-	
 });
