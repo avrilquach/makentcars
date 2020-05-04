@@ -50,12 +50,12 @@ html
                       .searchbar__location-error.hide Please set location
                       label.input-placeholder-group.searchbar__pickup
                         span.input-placeholder-label.screen-reader-only Pickup
-                        input#pickup.pickup.input-large.input-contrast.ui-datepicker-target(type='text', readonly='readonly', onfocus='this.blur()', placeholder='Pickup')
-                        input(type='hidden', name='pickup')
+                        input#pickup.pickup.input-large.input-contrast.ui-datepicker-target(type='text', readonly='readonly', onfocus='this.blur()', placeholder='Pickup' name='pickup')
+                        input(type='text',placeholder='Pickup' ).class_date.class_date1
                       label.input-placeholder-group.searchbar__return
                         span.input-placeholder-label.screen-reader-only  Return
-                        input#return.return.input-large.input-contrast.ui-datepicker-target(type='text', onfocus='this.blur()', readonly='readonly', placeholder=' Return')
-                        input(type='hidden', name='return')
+                        input#return.return.input-large.input-contrast.ui-datepicker-target(type='text', onfocus='this.blur()', readonly='readonly', placeholder=' Return' name='return')
+                        input(type='text', placeholder=' Return').class_date.class_date2
                       #autocomplete-menu-sbea76915.menu.hide(aria-expanded='false', aria-role='listbox')
                         .menu-section
                     input(type='hidden', name='source', value='bb')
