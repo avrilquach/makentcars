@@ -1,0 +1,42 @@
+.my-4.my-md-5
+  .mb-4
+    h2.title-sm.m-0
+      | Experiences
+  ul#experience-slider.experience-slider.owl-carousel
+    -for(i=0;i<6;i++)
+      li
+        .pro-img
+          a(href='#')
+            img.owl-lazy(data-src='img/img4.jpeg')
+        .pro-info
+          h4.text-truncate
+            span.ng-binding Food & Drink 
+            span · 
+            span.ng-binding Ho Chi Minh
+          a(href='#', title='#')
+            h5.text-truncate.ng-binding
+              | Saigon Street Food Feast
+          .exp_price
+            span ₫
+            |  224710 per guest
+          .star-rating-wrapper
+            .category_city
+              span
+                .star-rating
+                  .foreground
+                    i.icon.icon-star
+                    i.icon.icon-star
+                    i.icon.icon-star
+                    i.icon.icon-star
+                  .star-bg.background.mb_blck
+                    i.icon.icon-star
+                    i.icon.icon-star
+                    i.icon.icon-star
+                    i.icon.icon-star
+                    i.icon.icon-star
+              span.ng-binding 1 Review
+  .mt-3.mt-md-0.mb-5
+    a.see-all-link.d-md-inline-flex.align-items-center(href='#')
+      span
+        | See all
+      i.icon.icon-chevron-right.ml-2
