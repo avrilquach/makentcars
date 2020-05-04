@@ -1,3 +1,7 @@
+.daterangepicker .calendar-table td.active,
+.daterangepicker .calendar-table td.active:hover {
+  background: #00a699;
+}
 .daterangepicker {
   position: absolute;
   color: inherit;
