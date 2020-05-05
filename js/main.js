@@ -5,6 +5,12 @@ $(document).ready(function () {
 	$(".js-close-how-it-works").click(function (e) {
 		$(".js-how-it-works").hide();
 	})
+	$("#sm-search-field").click(function(e){
+		$(".search-modal-container").show();
+	})
+	$(".search-modal-container .modal-close").click(function(e){
+		$(".search-modal-container").hide();
+	})
 	$(".host_banner_slides").responsiveSlides();
 	$("#bottom_slider").responsiveSlides({
 		auto: false,
@@ -12,12 +18,6 @@ $(document).ready(function () {
 		nav: true,
 		speed: 500,
 		namespace: "callbacks",
-		before: function () {
-			$('.events').append("<li>before event fired.</li>");
-		},
-		after: function () {
-			$('.events').append("<li>after event fired.</li>");
-		}
 	});
 	$('input[name="pickup"]').daterangepicker();
 	$('input[name="return"]').daterangepicker();
@@ -25,4 +25,5 @@ $(document).ready(function () {
 	$('input[name="pickup"]').attr("placeholder", "Pickup");
 	$('input[name="return"]').val("");
 	$('input[name="return"]').attr("placeholder", "Return");
+	
 });

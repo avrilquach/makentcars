@@ -3,6 +3,7 @@ html
   include inc/head.jade
   body.home_view.v2.simple-header.p1
     main#site-content(role="main")
+      // banner content
       .hero.shift-with-hiw.js-hero
         .hero__background(data-native-currency='ZAR', aria-hidden='true')
           ul#home_slider.rslides.rslides3
@@ -16,22 +17,6 @@ html
                 | Rent Cars to ride from local car owners in 190+ countries
               .back-black
                 .show-sm.sm-search
-                  form#simple-search.simple-search.hide.js-p1-simple-search
-                    .alert.alert-with-icon.alert-error.hide.space-2.js-search-error
-                      i.icon.alert-icon.icon-alert-alt
-                      |         Please set location
-                    label.screen-reader-only(for='simple-search-location')
-                      | Where do you want to go?
-                    input#simple-search-location.input-large.js-search-location(type='text', placeholder='Where do you want to go?', autocomplete='off', name='location')
-                    .row.row-condensed.space-top-2.space-2
-                      .col-sm-6
-                        label.screen-reader-only(for='simple-search-pickup')
-                          | Pickup
-                        input#simple-search-pickup.input-large.pickup.js-search-pickup(type='text', name='pickup', placeholder='Pickup')
-                      .col-sm-6
-                        label.screen-reader-only(for='simple-search-return')
-                          | Return
-                        input#simple-search-return.input-large.return.js-search-return(type='text', name='return', placeholder=' Return')
                   #sm-search-field.input-addon.js-p1-search-cta
                     span.input-stem.input-large.fake-search-field
                       | Where do you want to go?
@@ -58,6 +43,7 @@ html
                         .menu-section
                     input(type='hidden', name='source', value='bb')
                     button#submit_location.searchbar__submit.btn.btn-primary.btn-large(type='submit') Search
+      // how it works
       .hide.show-md.show-lg.show-sm
         section.how-it-works.how-it-works--overlay.resp-how.js-how-it-works(aria-hidden='true', style='display: none; top: 0; height: 361px ')
           a.how-it-works__close.panel-close.js-close-how-it-works(href='javascript:void(0);')
@@ -69,26 +55,25 @@ html
             .row.space-top-8.text-center
               .how-it-works__step.how-it-works__step-one.col-md-4
                 .panel-body
-                  .how-it-works__image
                   h3
                     | Discover Amazing Listing
                   p
                     | Find a car of your choice with latest models, types and number of persons you wish to travel.
               .how-it-works__step.how-it-works__step-two.col-md-4
                 .panel-body
-                  .how-it-works__image
                   h3
                     | Book a Day
                   p
                     | Connect with your car owners confirm your booking, chat with owners for any details, pay with trusted payment services with Makent Cars
               .how-it-works__step.how-it-works__step-three.col-md-4
                 .panel-body
-                  .how-it-works__image
                   h3
                     | Travel
                   p
                     | Feel like an owner of the car throughout your journey
+      // discovery
       include inc/discovery.jade
+      // slider
       .hero.shift-with-hiw.js-hero.col-lg-12.col-md-12.col-sm-12(style='padding:0px; height:auto !important;')
         .hero__background_slider(data-native-currency='ZAR', aria-hidden='true')
           ul#bottom_slider.rslides.bottom_slider.bottom_slider1.rslides4
@@ -113,6 +98,7 @@ html
                   | Your Car
                 .h4.text-contrast.space-4.over-head
                   | See how Makent owners create a sense of belonging around the world
+      // our community
       .col-lg-12.col-md-12.col-sm-12(style='background:#edefed;')
         .discovery-section.page-container-responsive.page-container-no-padding(style='padding:0px !important;')
           .col-lg-12.nopad.text-center(style='padding:0px !important;')
@@ -145,6 +131,74 @@ html
                     | A professional photographer, patricia loves helping riders explore Shanghai's arts scene. 
                     br
                     |  Learn more about renting on Makent Cars
+      // search mobile
+      .search-modal-container.moched(style='display: none')
+        #search-modal--sm.modal(role='dialog', aria-hidden='false', tabindex='-1')
+          .modal-table
+            .modal-cell
+              .modal-content
+                .panel-header.modal-header
+                  a.modal-close(href='#', data-behavior='modal-close')
+                    span.screen-reader-only Close
+                    span.aria-hidden
+                  |             Search
+                .panel-body
+                  .modal-search-wrapper--sm
+                    input(type='hidden', name='source', value='mob')
+                    .row
+                      .searchbar__location-error.hide(style='left:22px; top:2%;') Please set location
+                      .col-sm-12
+                        label(for='header-location--sm')
+                          span.screen-reader-only Where to?
+                          input#header-search-form-mob.input-large.pac-target-input(type='text', placeholder='Where to?', autocomplete='off', name='location', value='')
+                    .row.row-condensed
+                      .col-sm-6
+                        label.pickup
+                          span.screen-reader-only Pickup
+                          input#modal_pickup.pickup.input-large.ui-datepicker-target(type='text', readonly='readonly', onfocus='this.blur()', autocomplete='off', name='pickup', placeholder='Pickup', value='')
+                      .col-sm-6
+                        label.return
+                          span.screen-reader-only Return
+                          input#modal_return.return.input-large.ui-datepicker-target(type='text', readonly='readonly', onfocus='this.blur()', autocomplete='off', name='return', placeholder='Return', value='')
+                    .home_de
+                      .home_pro
+                        .home_check
+                          strong Car Type
+                          #content-3.rom_ty.mCustomScrollbar._mCS_2.mCS-autoHide(style='position: relative; overflow: visible;')
+                            #mCSB_2.mCustomScrollBox.mCS-minimal.mCSB_vertical.mCSB_outside(tabindex='0', style='max-height: 150px;')
+                              #mCSB_2_container.mCSB_container(style='position:relative; top:0; left:0;', dir='ltr')
+                                .col-md-12.margin-top-10
+                                  .row
+                                    .holecheck
+                                      div
+                                        input#car-type-1.mob_car_type(type='checkbox', value='1')
+                                        img.mCS_img_loaded(src='img/convertible.png', width='20', height='30')
+                                        label.search_check_label(for='room-type-1') Convertible
+                                .col-md-12.margin-top-10
+                                  .row
+                                    .holecheck
+                                      div
+                                        input#car-type-3.mob_car_type(type='checkbox', value='3')
+                                        img.mCS_img_loaded(src='img/sedan.png', width='20', height='30')
+                                        label.search_check_label(for='room-type-3') Sedan
+                                .col-md-12.margin-top-10
+                                  .row
+                                    .holecheck
+                                      div
+                                        input#car-type-4.mob_car_type(type='checkbox', value='4')
+                                        img.mCS_img_loaded(src='img/suv.png', width='20', height='30')
+                                        label.search_check_label(for='room-type-4') SUV
+                                .col-md-12.margin-top-10
+                                  .row
+                                    .holecheck
+                                      div
+                                        input#car-type-5.mob_car_type(type='checkbox', value='5')
+                                        img.mCS_img_loaded(src='img/truck.png', width='20', height='30')
+                                        label.search_check_label(for='room-type-5') Truck
+                    .row.row-space-top-2
+                      .col-sm-12
+                        button#search-form--sm-btn.btn.btn-primary.btn-large.btn-block(type='button')
+                          i.icon.icon-search
+                          |                     Find a Car
 
-            
     include inc/script.jade
