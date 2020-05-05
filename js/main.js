@@ -19,12 +19,10 @@ $(document).ready(function () {
 			$('.events').append("<li>after event fired.</li>");
 		}
 	});
-	$('.class_date1').click(function(e){
-		$(".class_date1").hide();
-		$('input[name="pickup"]').daterangepicker();
-	})
-	$('.class_date2').click(function(e){
-		$(".class_date2").hide();
-		$('input[name="return"]').daterangepicker();
-	})
+	$('input[name="pickup"]').daterangepicker();
+	$('input[name="return"]').daterangepicker();
+	$('input[name="pickup"]').val("");
+	$('input[name="pickup"]').attr("placeholder", "Pickup");
+	$('input[name="return"]').val("");
+	$('input[name="return"]').attr("placeholder", "Return");
 });

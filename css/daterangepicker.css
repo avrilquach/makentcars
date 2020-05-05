@@ -338,14 +338,6 @@
   color: #fff;
 }
 
-.class_date{
-  position: absolute;
-  top: 0;
-}
-.searchbar__pickup, .searchbar__return{
-  position: relative;
-}
-
 /*  Larger Screen Styling */
 @media (min-width: 564px) {
   .daterangepicker {
